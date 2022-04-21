@@ -3,6 +3,7 @@ import classNames from "classnames";
 import PropTypes from 'prop-types';
 
 const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
+
     const availableTypes = ['thin', 'traditional'];
     const [activeType, setActiveType] = useState(types[0]);
     const onSelectType = index => {
@@ -44,11 +45,11 @@ const PizzaBlock = ({ name, imageUrl, price, types, sizes }) => {
                             onClick={() => onSelectSize(index)}
 
                             className={classNames({
-                            'active': activeSize === index,
-                            'disabled': !sizes.includes(size)
-                        })}>
+                                'active': activeSize === index,
+                                'disabled': !sizes.includes(size)
+                            })}>
 
-                        { size } cm.
+                            { size } cm.
                         </li>
                     ))}
                 </ul>
@@ -81,7 +82,7 @@ PizzaBlock.propTypes = {
     imageUrl: PropTypes.string,
     price: PropTypes.number,
     types: PropTypes.arrayOf(PropTypes.number).isRequired,
-    sizes: PropTypes.arrayOf(PropTypes.number).isRequired,
+    sizes: PropTypes.arrayOf(PropTypes.number).isRequired
 }
 
 PizzaBlock.defaultProps = {

@@ -1,9 +1,9 @@
 const initialState = {
     category: 0,
-    sortBy: 'popular'
+    sortBy: { type: 'popular', order: 'desc' }
 }
 
-const filters = (state = initialState, action) => {
+const filtersReducer = (state = initialState, action) => {
     if (action.type === 'SET-SORT-BY') {
         return {
             ...state,
@@ -19,4 +19,4 @@ const filters = (state = initialState, action) => {
     return state;
 }
 
-export default filters;
+export default filtersReducer;
