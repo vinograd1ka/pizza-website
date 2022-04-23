@@ -24,6 +24,14 @@
     }
   }
 
+  @media(max-width:1060px){
+    &__label {
+      display: block;
+      text-align: center;
+      margin: 20px 0;
+    }
+  }
+
   &__popup {
     position: absolute;
     right: 0;
@@ -53,4 +61,11 @@
       }
     }
   }
+
+  @media(max-width:1060px){
+    &__popup {
+      left: 25%;
+    }
+  }
 }
+

@@ -8,6 +8,12 @@
     margin-right: 3.7%;
   }
 
+  @media(max-width:1500px){
+    &:not(:nth-of-type(4n)) {
+      margin-right: 0;
+    }
+  }
+
   &__image {
     width: 260px;
   }

@@ -27,4 +27,15 @@
       }
     }
   }
+
+  @media(max-width:1060px){
+    ul {
+      display: block;
+      text-align: center;
+
+      li {
+        margin: 5px 0;
+      }
+    }
+  }
 }

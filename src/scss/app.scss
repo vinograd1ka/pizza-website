@@ -9,6 +9,12 @@ body {
   background-color: $background;
 }
 
+@media(max-width:600px){
+  body {
+    padding: 0;
+  }
+}
+
 .wrapper {
   width: calc(100vw - 100px);
   height: 100%;
@@ -21,6 +27,12 @@ body {
 .content {
   padding: 40px 0;
 
+  @media(max-width:600px){
+    .content {
+      padding: 0;
+    }
+  }
+
   &__title {
     margin: 35px 0;
   }
@@ -31,10 +43,28 @@ body {
     justify-content: flex-start;
   }
 
+  @media(max-width:1500px){
+    &__items {
+      justify-content: space-around;
+    }
+  }
+
   &__top {
     display: flex;
     align-items: center;
     justify-content: space-between;
+  }
+
+  @media(max-width:1060px){
+    &__top {
+      display: block;
+    }
+  }
+}
+
+@media(max-width:1060px){
+  .content {
+    padding: 20px 0;
   }
 }
 
@@ -44,7 +74,7 @@ body {
 
   &--cart {
     max-width: 820px;
-    margin: 90px auto;
+    margin: 30px auto;
     .content__title {
       margin: 0;
     }
