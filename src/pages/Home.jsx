@@ -20,8 +20,6 @@ const Home = () => {
     const { category, sortBy } = useSelector(({ filtersReducer }) => filtersReducer)
 
     const cartItems = useSelector(({ cartReducer }) => cartReducer.items)
-    console.log(cartItems)
-
 
     useEffect(() => {
         dispatch(fetchPizzas(category, sortBy))
@@ -61,7 +59,7 @@ const Home = () => {
                         onClickAddPizza={handleAddPizzaToCart}
                         key={obj.id}
                         isLoading={true}
-                        addedCount={cartItems[obj.id] && cartItems[obj.id].length}
+                        addedCount={cartItems[obj.id] && cartItems[obj.id].items.length}
                         {...obj}/>
                     )
 

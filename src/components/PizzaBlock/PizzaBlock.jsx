@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import classNames from "classnames";
 import PropTypes from 'prop-types';
 import Button from "../Button";
-import {addPizzaToCart} from "../../redux/actions/cart-ac";
 
 const PizzaBlock = ({ id, name, imageUrl, price, types, sizes, onClickAddPizza, addedCount }) => {
 

@@ -8,7 +8,7 @@ export const setLoaded = val => ({
 export const fetchPizzas = (category, sortBy) => (dispatch) => {
     dispatch(setLoaded(false))
     if (category === 0) {
-        pizzasAPI.getPizzas()
+        pizzasAPI.getPizzas(sortBy)
             .then(data => {
                 dispatch(setPizzas(data))
             })
